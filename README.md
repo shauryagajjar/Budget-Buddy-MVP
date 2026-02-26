@@ -1,73 +1,40 @@
-# Welcome to your Lovable project
+# Budget Buddy MVP
 
-## Project info
+## Overview
+Budget Buddy MVP is a budget management application designed to help users track their income and expenses effectively. With a user-friendly interface and robust features, Budget Buddy MVP simplifies budgeting for everyone.
 
-**URL**: https://lovable.dev/projects/ddcdf4e3-c88f-44f2-ac8f-f4a1c7d37e75
+## Features
+- **Expense Tracking**: Easily log and categorize your expenses.
+- **Income Management**: Keep track of different income sources.
+- **Budget Planning**: Set budgets for different categories and monitor your spending.
+- **Reports & Analytics**: Generate reports to analyze spending trends.
+- **Notifications**: Get reminders for bill payments and budget limits.
 
-## How can I edit this code?
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/shauryagajjar/Budget-Buddy-MVP.git
+   ```
+2. Navigate into the directory:
+   ```bash
+   cd Budget-Buddy-MVP
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/ddcdf4e3-c88f-44f2-ac8f-f4a1c7d37e75) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+## Usage
+Run the application using:
+```bash
+npm start
 ```
 
-**Edit a file directly in GitHub**
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Author
+Shaurya Gajjar
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/ddcdf4e3-c88f-44f2-ac8f-f4a1c7d37e75) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## Acknowledgments
+Special thanks to all contributors and resources that helped in the development of this application.
