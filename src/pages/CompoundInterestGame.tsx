@@ -40,6 +40,7 @@ interface GameSettings {
   monthlySaving: number;
   returnRate: number;
   compoundingFrequency: "daily" | "monthly" | "yearly";
+  duration: number;
 }
 
 const EVENTS: GameEvent[] = [
