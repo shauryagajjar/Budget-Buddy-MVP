@@ -40,7 +40,9 @@ interface GameSettings {
   monthlySaving: number;
   returnRate: number;
   compoundingFrequency: "daily" | "monthly" | "yearly";
-  duration: number;
+}
+
+const EVENTS: GameEvent[] = [
   { id: "festival", type: "save", title: "Festival Bonus! 🎉", description: "You received ₹1,000 as a festival gift from your family!",
     options: [
       { label: "Save Full Amount", impact: 1000, isGood: true, description: "Add ₹1,000 to your savings" },
@@ -139,15 +141,26 @@ interface GameSettings {
       { label: "Invest ₹1,500", impact: 1500, isGood: true, description: "Tax-saver + equity growth" },
       { label: "Park in Savings", impact: 0, isGood: false, description: "Misses both tax & growth" }
     ]}
+];
 
+const SMART_TIPS = [
+  "💡 Compounding needs time, not genius. Start early!",
+  "💡 Staying invested beats timing the market.",
+  "💡 Saving habits matter more than income at your age.",
   "💡 Panic selling destroys returns. Stay calm!",
   "💡 Rule of 72: Divide 72 by interest rate = years to double.",
   "💡 Small monthly savings grow huge with compounding.",
   "💡 Compound interest is interest on interest!",
   "💡 The earlier you start, the less you need to save.",
   "💡 Consistency beats perfection in investing.",
-  "💡 Your money works while you sleep!"
+  "💡 Your money works while you sleep!",
+  "💡 If it sounds too good to be true — it is.",
+  "💡 Diversification: don't put all eggs in one basket.",
+  "💡 Boring index funds beat exciting hot tips long-term.",
+  "💡 Emergency fund FIRST, investing second.",
+  "💡 Lifestyle inflation is the silent wealth killer."
 ];
+
 
 // Glassmorphism card classes
 const glass = "bg-white/5 backdrop-blur-xl border border-white/10 text-slate-100 shadow-2xl shadow-black/40";
