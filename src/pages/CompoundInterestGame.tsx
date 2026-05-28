@@ -41,9 +41,6 @@ interface GameSettings {
   returnRate: number;
   compoundingFrequency: "daily" | "monthly" | "yearly";
   duration: number;
-}
-
-const EVENTS: GameEvent[] = [
   { id: "festival", type: "save", title: "Festival Bonus! 🎉", description: "You received ₹1,000 as a festival gift from your family!",
     options: [
       { label: "Save Full Amount", impact: 1000, isGood: true, description: "Add ₹1,000 to your savings" },
@@ -87,13 +84,62 @@ const EVENTS: GameEvent[] = [
     options: [
       { label: "Invest in Yourself", impact: -500, isGood: true, description: "Spend on learning (future gains!)" },
       { label: "Skip It", impact: 0, isGood: false, description: "Save money, miss opportunity" }
+    ]},
+  { id: "hot_tip", type: "risk", title: "Hot Stock Tip! 🔥", description: "A friend says a tiny crypto coin will '10x next month'. Will you bet?",
+    options: [
+      { label: "Stick to Your Plan", impact: 0, isGood: true, description: "Boring beats broke" },
+      { label: "Gamble ₹500", impact: -500, isGood: false, description: "Coin tanks. Money gone." }
+    ]},
+  { id: "sip_upgrade", type: "investment", title: "SIP Upgrade Time 📈", description: "Your monthly income grew. Want to upgrade your SIP?",
+    options: [
+      { label: "Boost SIP by ₹500", impact: 500, isGood: true, description: "Compounding loves more fuel" },
+      { label: "Keep It Same", impact: 0, isGood: true, description: "Steady is okay" },
+      { label: "Reduce SIP", impact: -300, isGood: false, description: "More fun money, less future money" }
+    ]},
+  { id: "scam", type: "risk", title: "Scam Alert! ⚠️", description: "A WhatsApp message promises 'Double your money in 30 days, guaranteed!'",
+    options: [
+      { label: "Ignore & Report", impact: 0, isGood: true, description: "Smart move. There's no guarantee in investing." },
+      { label: "Try with ₹1,000", impact: -1000, isGood: false, description: "It was a scam. Money lost." }
+    ]},
+  { id: "gift", type: "bonus", title: "Diwali Bonanza! 🪔", description: "Relatives gifted you ₹3,000 total this festival!",
+    options: [
+      { label: "Invest ₹2,500, Treat ₹500", impact: 2500, isGood: true, description: "Balance future + fun" },
+      { label: "Invest All", impact: 3000, isGood: true, description: "Maximum compounding!" },
+      { label: "Buy New Gadget", impact: -200, isGood: false, description: "Gadget value drops fast" }
+    ]},
+  { id: "friend_loan", type: "discipline", title: "Friend Needs ₹500 🤝", description: "Best friend asks to borrow ₹500. Promises to return next month.",
+    options: [
+      { label: "Lend, Note It Down", impact: -500, isGood: true, description: "Helping is good, tracking is smart" },
+      { label: "Politely Decline", impact: 0, isGood: true, description: "Money + friendship safe" },
+      { label: "Lend, Forget It", impact: -700, isGood: false, description: "Unspoken loans = lost money" }
+    ]},
+  { id: "subscription", type: "discipline", title: "Subscription Sneak 📺", description: "You found 3 unused subscriptions costing ₹600/year total.",
+    options: [
+      { label: "Cancel All Three", impact: 600, isGood: true, description: "Found money!" },
+      { label: "Keep Just In Case", impact: -600, isGood: false, description: "Quiet money leak continues" }
+    ]},
+  { id: "market_boom", type: "risk", title: "Market Boom! 🚀", description: "Stocks surged 15%! Everyone is buying more.",
+    options: [
+      { label: "Stay the Course", impact: 3, isGood: true, description: "Keep investing your usual SIP" },
+      { label: "Buy at the Peak", impact: -2, isGood: false, description: "Buy high, regret later" }
+    ]},
+  { id: "skill_paid_off", type: "bonus", title: "Skill Paid Off! 💪", description: "Your online course landed you a ₹4,000 project!",
+    options: [
+      { label: "Invest All", impact: 4000, isGood: true, description: "Snowball it" },
+      { label: "Split 50/50", impact: 2000, isGood: true, description: "Half invest, half celebrate" },
+      { label: "Lifestyle Upgrade", impact: 0, isGood: false, description: "New gadget = old habit" }
+    ]},
+  { id: "health", type: "save", title: "Health First 🏥", description: "A small fever needs ₹400 in medicine.",
+    options: [
+      { label: "Pay From Emergency Fund", impact: -400, isGood: true, description: "Exactly what it's for" },
+      { label: "Skip Doctor, Save Money", impact: -800, isGood: false, description: "Got worse, cost more later" }
+    ]},
+  { id: "tax_save", type: "investment", title: "Tax-Save ELSS Option 🧾", description: "You can put ₹1,500 in an ELSS fund (3-year lock-in, ~12% growth).",
+    options: [
+      { label: "Invest ₹1,500", impact: 1500, isGood: true, description: "Tax-saver + equity growth" },
+      { label: "Park in Savings", impact: 0, isGood: false, description: "Misses both tax & growth" }
     ]}
-];
 
-const SMART_TIPS = [
-  "💡 Compounding needs time, not genius. Start early!",
-  "💡 Staying invested beats timing the market.",
-  "💡 Saving habits matter more than income at your age.",
   "💡 Panic selling destroys returns. Stay calm!",
   "💡 Rule of 72: Divide 72 by interest rate = years to double.",
   "💡 Small monthly savings grow huge with compounding.",
